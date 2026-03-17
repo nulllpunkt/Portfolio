@@ -1,0 +1,159 @@
+:root {
+    --bg-color: #0c0c0c;
+    --text-color: #00ff00;
+    --font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#terminal {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ascii-art {
+    white-space: pre;
+    font-weight: bold;
+    color: #4af626;
+    margin-bottom: 20px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prompt {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    flex: 1;
+    outline: none;
+}
+
+.command-output {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #ff3333;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+/* Custom layout classes */
+.content-section {
+    margin-top: 25px;
+}
+
+h3 {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.file-list {
+    list-style-type: "[-] ";
+    margin-left: -20px;
+}
+
+.file-list li {
+    margin-bottom: 5px;
+}
+
+/* Programmatic pixelation / retro image effect */
+.retro-img {
+    image-rendering: pixelated; 
+    filter: grayscale(100%) sepia(100%) hue-rotate(70deg) brightness(0.8) contrast(150%);
+    max-width: 100%;
+    display: block;
+    margin: 10px 0;
+    border: 1px dotted var(--text-color);
+}
+
+.gallery figure {
+    margin: 0 0 30px 0;
+}
+
+.gallery figcaption {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+#navbar {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    border-bottom: 1px dashed var(--text-color);
+    padding-bottom: 10px;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+}
+
+#navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .ascii-art {
+        font-size: 8px; /* Scale down ascii art on mobile */
+        overflow-x: auto;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .input-line {
+        flex-wrap: wrap;
+    }
+
+    input {
+        min-width: 100%;
+        margin-top: 5px;
+    }
+}
