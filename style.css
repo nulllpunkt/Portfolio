@@ -16,7 +16,7 @@ body {
 }
 
 #terminal {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.5;
@@ -92,8 +92,23 @@ h3 {
     border: 1px dotted var(--text-color);
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
 .gallery figure {
-    margin: 0 0 30px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery .retro-img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
 }
 
 .gallery figcaption {
@@ -106,7 +121,7 @@ a:hover {
 }
 
 #navbar {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto 20px auto;
     border-bottom: 1px dashed var(--text-color);
     padding-bottom: 10px;
